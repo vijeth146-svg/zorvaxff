@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continue to YouTube</title>
+<style>
+body{font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0;background:#fff}
+.box{text-align:center;padding:30px}
+button{border:0;border-radius:10px;padding:14px 24px;font-size:17px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>Open YouTube</h2>
+  <p>Tap below to continue to the YouTube channel.</p>
+  <button onclick="openYouTube()">Continue to YouTube</button>
+</div>
+
+<script>
+function openYouTube() {
+  const appUrl = "intent://www.youtube.com/@zorvaxff#Intent;scheme=https;package=com.google.android.youtube;end";
+  const webUrl = "https://youtube.com/@zorvaxff";
+  window.location.href = appUrl;
+  setTimeout(() => { window.location.href = webUrl; }, 1500);
+}
+</script>
+</body>
+</html>
